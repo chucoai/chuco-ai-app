@@ -1,0 +1,11 @@
+# ── Keys & stray test files ─────────────
+ls
+ls.pub
+ssh-keygen\ -t\ ed25519\ -C\ \"ydavid@chuco.ai\"\ .pub
+
+# ── Virtual environments ────────────────
+venv/
+
+# ── Python byte-code / caches ───────────
+__pycache__/
+*.py[cod]
