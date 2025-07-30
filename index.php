@@ -600,7 +600,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>(915) 555-0123</span>
+                        <span><a href="18449152828">(844) 915-2828</a></span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
