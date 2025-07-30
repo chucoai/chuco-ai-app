@@ -600,7 +600,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span><a href="18449152828">(844) 915-2828</a></span>
+                        <span><a href="tel:18449152828">(844) 915-2828</a></span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
