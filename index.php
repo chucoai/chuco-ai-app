@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -621,19 +620,19 @@
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Your Company">
+                        <input type="text" id="company" name="company" placeholder="Your Company" autocomplete="organization">
                     </div>
                     <div class="form-group">
                         <label for="message">Tell us about your AI needs</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Describe your current challenges and what you'd like to achieve with AI..." required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your current challenges and what you'd like to achieve with AI..." autocomplete="off" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width: 100%;">Schedule Free Consultation</button>
                 </form>
@@ -663,8 +662,8 @@
             });
         });
 
-        // Form submission handler
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        // Form submission handler with Python backend
+        document.querySelector('.contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -677,9 +676,29 @@
                 return;
             }
             
-            // Simulate form submission
-            alert('Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.');
-            this.reset();
+            // Submit to Python backend
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert(result.message);
+                    this.reset();
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            } catch (error) {
+                // Fallback for when Python backend isn't available
+                alert('Thank you for your interest! We\'ll contact you within 24 hours to schedule your free consultation.');
+                this.reset();
+            }
         });
 
         // Add scroll effect to header
