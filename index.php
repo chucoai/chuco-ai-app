@@ -500,7 +500,6 @@
                     </div>
                     <h3>AI Opportunity Audits</h3>
                     <p>Comprehensive analysis of your workflows and data readiness to identify the best AI implementation opportunities.</p>
-                    <div class="service-price">$3K - $5K</div>
                 </div>
 
                 <div class="service-card">
@@ -509,7 +508,6 @@
                     </div>
                     <h3>Custom LLM Integrations</h3>
                     <p>Domain-tuned AI assistants, support bots, and lead generation systems tailored to your business needs.</p>
-                    <div class="service-price">$15K - $100K</div>
                 </div>
 
                 <div class="service-card">
@@ -518,7 +516,6 @@
                     </div>
                     <h3>Data Strategy & Architecture</h3>
                     <p>Design and implement data pipelines, warehousing solutions, and governance frameworks for AI readiness.</p>
-                    <div class="service-price">$20K - $80K</div>
                 </div>
 
                 <div class="service-card">
@@ -527,7 +524,6 @@
                     </div>
                     <h3>AI-Driven Automation</h3>
                     <p>RPA, API orchestration, and low-code workflow automation to eliminate repetitive tasks and boost efficiency.</p>
-                    <div class="service-price">$10K - $50K</div>
                 </div>
 
                 <div class="service-card">
@@ -536,7 +532,6 @@
                     </div>
                     <h3>Training & Change Management</h3>
                     <p>Hands-on staff training and change management strategies to ensure successful AI adoption across your team.</p>
-                    <div class="service-price">$5K - $25K</div>
                 </div>
 
                 <div class="service-card">
@@ -545,7 +540,6 @@
                     </div>
                     <h3>Managed AI Services</h3>
                     <p>Ongoing support, monitoring, and optimization of your AI systems to ensure continued performance and ROI.</p>
-                    <div class="service-price">$1K - $10K/month</div>
                 </div>
             </div>
         </div>
@@ -600,7 +594,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span><a href="tel:18449152828">(844) 915-2828</a></span>
+                        <a href="tel:+18449152828" style="color: inherit; text-decoration: none;">(844) 915-2828</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
@@ -617,14 +611,14 @@
                     </p>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+                        <input type="email" id="email" name="_replyto" placeholder="your@email.com" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="company">Company</label>
@@ -634,6 +628,12 @@
                         <label for="message">Tell us about your AI needs</label>
                         <textarea id="message" name="message" rows="4" placeholder="Describe your current challenges and what you'd like to achieve with AI..." autocomplete="off" required></textarea>
                     </div>
+                    
+                    <!-- Hidden fields for better tracking -->
+                    <input type="hidden" name="_subject" value="New Chuco AI Consultation Request">
+                    <input type="hidden" name="_next" value="https://chuco.ai/thank-you.html">
+                    <input type="hidden" name="_autoresponse" value="Thank you for contacting Chuco AI! We'll get back to you within 24 hours to schedule your free consultation.">
+                    
                     <button type="submit" class="btn-primary" style="width: 100%;">Schedule Free Consultation</button>
                 </form>
             </div>
