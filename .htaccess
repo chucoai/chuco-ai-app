@@ -1,0 +1,3 @@
+DirectoryIndex index.html templates/index.html
+RewriteEngine On
+RewriteRule ^$ /templates/index.html [L]
