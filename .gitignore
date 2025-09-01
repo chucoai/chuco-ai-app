@@ -47,3 +47,7 @@ ssh-keygen*
 *.pem
 *.key
 ssh-keygen*
+.env.production
+.vscode/
+__pycache__/
+venv/
