@@ -18,3 +18,7 @@ pytest
 
 # Production server
 gunicorn
+httpx==0.25.0
+pydantic-settings==2.0.3
+email-validator==2.1.0
+httpx==0.25.0
