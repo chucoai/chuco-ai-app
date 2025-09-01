@@ -1,4 +1,22 @@
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.env
+.env.local
+.env.production
+.env.development
+.env.staging
+env.py
+secrets.py
+config.local.py
+local_settings.py
+
+# ==========================================
 # Python
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,34 +38,153 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+pip-log.txt
+pip-delete-this-directory.txt
 
+# ==========================================
 # Virtual Environment
+# ==========================================
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
+virtualenv/
+.venv/
+Pipfile.lock
 
-# Environment variables
-.env
-.env.local
-.env.production
+# ==========================================
+# Database
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+chucoai.db
+database.db
+local.db
+test.db
+instance/
 
-# IDE
+# ==========================================
+# IDE & Editors
+# ==========================================
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+.vs/
+*.code-workspace
 
-# OS
+# ==========================================
+# Operating System
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
+.directory
 
-# Logs
+# ==========================================
+# Logs & Temporary Files
+# ==========================================
 *.log
-*.pub
-ssh-keygen*
-*.pub
+logs/
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+tmp/
+temp/
+
+# ==========================================
+# Security & Keys
+# ==========================================
 *.pem
 *.key
+*.pub
+*.crt
+*.cer
+*.p12
+*.pfx
 ssh-keygen*
-.env.production
-.vscode/
-__pycache__/
-venv/
+id_rsa*
+id_dsa*
+*.ppk
+
+# ==========================================
+# Backup Files
+# ==========================================
+*.bak
+*.backup
+*.old
+*.orig
+*.~*
+*~
+*.backu
+
+# ==========================================
+# Testing
+# ==========================================
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+test-results/
+tests/__pycache__/
+
+# ==========================================
+# FastAPI Specific
+# ==========================================
+.webassets-cache
+staticfiles/
+mediafiles/
+collected_static/
+
+# ==========================================
+# Alembic (Database Migrations)
+# ==========================================
+alembic.ini.local
+alembic/versions/__pycache__/
+
+# ==========================================
+# Project Specific
+# ==========================================
+# Email logs
+email_logs/
+sent_emails/
+
+# Uploaded files
+uploads/
+media/
+
+# Cache directories
+cache/
+.cache/
+
+# Session files
+sessions/
+flask_session/
+
+# Generated files
+*.min.css
+*.min.js
+*.map
